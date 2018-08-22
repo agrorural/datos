@@ -1,0 +1,30 @@
+// Fuentes
+@mixin text-render() {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+}
+
+@mixin font-family($font: 'Libre Franklin', $weight: 400) {
+  font-family: $font, sans-serif;
+  font-weight: $weight;
+  @include text-render();
+}
+
+@function color-yiq($color) {
+  $r: red($color);
+  $g: green($color);
+  $b: blue($color);
+
+  $yiq: (($r * 299) + ($g * 587) + ($b * 114)) / 1000;
+
+  @if ($yiq >= 150) {
+    @return rgba($black, 0.85);
+  } @else {
+    @return rgba($white, 0.85);
+  }
+}
+
+@mixin color-yiq($color: $body-bg, $prop: 'color') {
+  #{$prop}: color-yiq($color);
+}

@@ -1,0 +1,44 @@
+#mainHeader {
+  .branding {
+    background-color: white;
+    padding: 1.5rem 0;
+    height: auto;
+
+    .branding-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+
+      @media #{$medium-and-up} {
+        flex-direction: row;
+      }
+      
+      a {
+        line-height: 0;
+        padding: 0.75rem;
+      }
+    }
+  }
+
+  .masshead {
+    background-image: url(../images/masshead.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-color: lightgray;
+    min-height: 375px;
+
+    .masshead-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 375px;
+
+      .masshead-content {
+        margin-top: 100px;
+        text-align: right;
+      }
+    }
+  }
+}

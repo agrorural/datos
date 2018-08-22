@@ -1,0 +1,14 @@
+nav {
+  background-color: transparent;
+  box-shadow: none;
+
+  &.primary {
+    @include font-family('Ubuntu', 700);
+    
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    text-transform: uppercase;
+  }
+}
