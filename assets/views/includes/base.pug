@@ -12,7 +12,7 @@ html(lang="en")
           div(class="branding-wrapper container")
             a(id="minagri" href="https://www.gob.pe/minagri" class="" target="_blank")
               img(class="materialize-logo" src="dist/images/minagri__logo.svg" alt="AGRO RURAL", style="height:55px")
-            a(id="agro_rural" href="https://www.agrorural.gob.pe" class="" target="_blank")
+            a(id="agro_rural" href="http://datos.agrorural.gob.pe" class="" target="_blank")
               img(class="materialize-logo" src="dist/images/agro_rural__logo.svg" alt="AGRO RURAL", style="height:65px")
         section(class="masshead")
           div(class="masshead-wrapper container")
@@ -20,20 +20,14 @@ html(lang="en")
               picture
                 img(src="dist/images/datos_abiertos__logo.png", alt="", class="responsive-img")
             nav(class="primary")
-              a(href="#!") Portal
-              a(href="#!" class="active") Datos Abiertos
-              a(href="#!") Gobierno Abierto
-              a(href="#!") Contacto
+              a(href="https://www.agrorural.gob.pe") Portal
+              a(href="/" class="active") Datos Abiertos
+              a(href="https://www.agrorural.gob.pe/gobierno-abierto/") Gobierno Abierto
+              a(href="https://www.agrorural.gob.pe/contacto/") Contacto
     block main
       main
-        .container
-          .page-header
-            section.page-action
-              h2 #{title}
-          
-          section.row
-            block content
-              p Hola mundo
+        block content
+          p Hola mundo
 
     
 

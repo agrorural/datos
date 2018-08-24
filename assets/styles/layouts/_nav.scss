@@ -10,5 +10,12 @@ nav {
     align-items: center;
     justify-content: space-between;
     text-transform: uppercase;
+    margin-bottom: 20px;
+    height: 48px;
+    line-height: 48px;
+
+    a {
+      @include fancy-link();
+    }
   }
 }

@@ -16,12 +16,15 @@
       
       a {
         line-height: 0;
-        padding: 0.75rem;
+        padding: 0.75rem 0;
       }
     }
   }
 
   .masshead {
+    @include bg-overlay();
+
+    position: relative;
     background-image: url(../images/masshead.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -30,13 +33,15 @@
     min-height: 375px;
 
     .masshead-wrapper {
+      position: relative;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       height: 375px;
+      z-index: 1;
 
       .masshead-content {
-        margin-top: 100px;
+        margin-top: 75px;
         text-align: right;
       }
     }

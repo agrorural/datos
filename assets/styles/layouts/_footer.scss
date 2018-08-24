@@ -1,0 +1,35 @@
+.page-footer {
+  background-color: #eee;
+  padding: 40px 0;
+  color: rgba(color-yiq(#eee), 0.5);
+
+  p {
+    font-size: 0.95rem;
+    margin: 5px 0;
+  }
+
+  .row {
+    margin-bottom: 0;
+  }
+
+  h5 {
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 1rem 0 1.35rem 0;
+    color: rgba(color-yiq(#eee), 0.65);
+  }
+
+  ul > li {
+    margin-bottom: 5px;
+
+    a {
+      font-size: 0.95rem;
+      color: rgba(color-yiq(#eee), 0.5);
+  
+      &:hover {
+        color: rgba(color-yiq(#eee), 0.65);
+      }
+    }
+  }
+}

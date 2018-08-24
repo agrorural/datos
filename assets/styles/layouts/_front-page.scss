@@ -1,0 +1,304 @@
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0% { 
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.15);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+.section {
+  &#info {
+    .card {
+      box-shadow: none;
+
+      a {
+        display: block;
+        position: relative;
+      }
+
+      .card-title {
+        transition: background-color 0.5s ease-in-out;
+      }
+
+      .card-content {
+        padding: 48px 24px;
+
+        picture {
+          position: relative;
+          display: block;
+          margin: auto;
+          text-align: center;
+          width: 100%;
+    
+          .mainIcon {
+            font-size: 100px;
+            transform: scale(1);
+            transition: all 0.5s ease-in-out;
+          }
+
+          span {
+            position: absolute;
+            padding: 10px;
+            border-radius: 500rem;
+            left: 50%;
+            transform: translate(-50%, 0);
+            top: -20px;
+            background-color: $yellow-100;
+            transition: all 0.5s ease-in-out;
+          }
+        }
+      }
+
+      &:hover {
+        picture {
+          .mainIcon {
+            transform: scale(1.15);
+          }
+
+          span {
+            top: -30px;
+
+            .fa-sync {
+              animation: rotate 1s linear infinite;
+            }
+
+            .fa-plus,
+            .fa-lock-open {
+              animation: pulse 1s linear infinite;
+            }
+          }
+        }
+
+        .card-title {
+          background-color: rgba(0, 0, 0, 0.1);
+        }
+      }
+
+      &.card-orange {
+        picture {
+          span {
+            color: $orange-300;
+          }
+        }
+      }
+
+      &.card-purple {
+        picture {
+          span {
+            color: $purple-200;
+          }
+        }
+      }
+
+      &.card-green {
+        picture {
+          span {
+            color: $green-100;
+          }
+        }
+      }
+    }
+  }
+
+  &#categories {
+    background-color: rgba($orange-300, 0.5);
+
+    .row {
+      margin-bottom: 0;
+    }
+
+    .page-header {
+      @include page-header($orange-300);
+    }
+
+    .card {
+      background-color: transparent;
+      box-shadow: none;
+
+      a {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: start;
+        color: white;
+        transition: color 0.5s ease;
+
+        &:hover {
+          color: $orange-300;
+        }
+      }
+
+      .card-content {
+        padding: 0;
+
+        picture {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: $orange-300;
+          width: 72px;
+          height: 72px;
+          border-radius: 72px;
+          border: 5px solid rgba(255, 255, 255, 0.35);
+
+          svg {
+            width: 36px;
+            fill: white;
+          }
+        }
+      }
+
+      .card-title {
+        background-color: transparent;
+        padding: 0;
+        text-align: left;
+        font-size: 16px;
+      }
+
+      &:hover {
+        picture {
+          animation: pulse 1s linear infinite;
+        }
+      }
+    }
+  }
+
+  &#projects {
+    background-color: rgba($green-100, 0.075);
+
+    .row {
+      margin-bottom: 0;
+    }
+
+    .page-header {
+      @include page-header($green-100);
+    }
+
+    .card {
+      box-shadow: none;
+      background-color: $green-100;
+      transition: background-color 0.5s ease-in-out;
+
+      a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        transition: color 0.5s ease-in-out;
+
+        &:hover {
+          color: $yellow-200;
+        }
+      }
+
+      .card-content {
+        img {
+          width: 150px;
+        }
+      }
+
+      .card-title {
+        background-color: transparent;
+        font-size: 16px;
+      }
+
+      &:hover {
+        background-color: $green-200;
+      }
+    }
+  }
+
+  &#banners {
+    .row {
+      margin-bottom: 0;
+    }
+
+    .card {
+      height: 90px;
+
+      a {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        height: 90px;
+        background-color: white;
+        transition: background-color 0.5s ease-in-out;
+
+        &#ideas {
+          color: $green-100;
+
+          span:first-child {
+            color: white;
+            background-color: $green-100;
+          }
+        }
+
+        &#transparencia {
+          color: $purple-200;
+
+          span:first-child {
+            color: white;
+            background-color: $purple-200;
+          }
+        }
+      }
+
+      .card-title {
+        background-color: transparent;
+        font-size: 18px;
+      }
+
+      .card-content {
+        padding: 0;
+        height: 90px;
+
+        picture {
+          height: 90px;
+          display: flex;
+          align-items: center;
+        }
+        
+        span {
+          height: 90px;
+          display: flex;
+          align-items: center;
+          padding: 0 1rem;
+          font-size: 24px;
+        }
+      }
+
+      &:hover {
+        a {
+          &#ideas {
+            background-color: $green-100;
+            color: white;
+          }
+
+          &#transparencia {
+            background-color: $purple-200;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}

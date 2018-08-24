@@ -26,3 +26,34 @@ h5,
 h6 {
     @include font-family('ubuntu');
 }
+
+.card {
+  .card-title {
+    @include font-family('Viga');
+
+    font-size: 18px;
+    line-height: 23px;
+    text-transform: uppercase;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin: 0 1rem 0;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  &.card-orange {
+    @include card-variant($orange-300);
+  }
+
+  &.card-green {
+    @include card-variant($green-100);
+  }
+
+  &.card-purple {
+    @include card-variant($purple-200);
+  }
+}
+
+.section {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
